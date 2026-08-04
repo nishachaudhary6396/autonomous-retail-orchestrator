@@ -1,14 +1,16 @@
-from dotenv import load_dotenv
-import os
-
-load_dotenv()
+from pydantic_settings import BaseSettings, SettingsConfigDict
 
 
-class Settings:
-    MISTRAL_API_KEY = os.getenv("MISTRAL_API_KEY")
-    MODEL_NAME = os.getenv("MODEL_NAME", "mistral-small-latest")
-    DATABASE_URL = os.getenv("DATABASE_URL")
-    CHROMA_DB_PATH = os.getenv("CHROMA_DB_PATH", "chroma_db")
+class Settings(BaseSettings):
+    GROQ_API_KEY: str
+    MODEL_NAME: str = "llama-3.3-70b-versatile"
+    DATABASE_URL: str
+    CHROMA_DB_PATH: str = "chroma_db"
+
+    model_config = SettingsConfigDict(
+        env_file=".env",
+        extra="ignore",
+    )
 
 
 settings = Settings()

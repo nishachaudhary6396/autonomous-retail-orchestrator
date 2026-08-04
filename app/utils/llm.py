@@ -1,9 +1,9 @@
-from langchain_mistralai import ChatMistralAI
+from langchain_groq import ChatGroq
 
 from app.config.config import settings
 
-llm = ChatMistralAI(
+llm = ChatGroq(
     model=settings.MODEL_NAME,
-    api_key=settings.MISTRAL_API_KEY,
-    temperature=0.1,
+    groq_api_key=settings.GROQ_API_KEY,
+    temperature=0.2,
 )

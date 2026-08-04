@@ -1,7 +1,7 @@
 from app.utils.llm import llm
 
 response = llm.invoke(
-    "Reply with exactly: Mistral connection successful."
+    "Say hello in one sentence."
 )
 
 print(response.content)
