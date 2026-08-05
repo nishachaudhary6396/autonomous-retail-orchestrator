@@ -40,3 +40,6 @@ tqdm
 
 mistralai
 langchain-mistralai
+
+langgraph
+langchain-groq
