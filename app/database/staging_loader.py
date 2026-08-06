@@ -19,7 +19,7 @@ class StagingLoader:
         pandas_df.to_sql(
             name=table_name,
             con=engine,
-            if_exists="replace",
+            if_exists="append",
             index=False,
             chunksize=10000,
         )
