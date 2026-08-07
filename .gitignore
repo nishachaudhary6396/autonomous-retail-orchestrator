@@ -8,7 +8,6 @@ __pycache__/
 
 logs/
 
-chroma_db/
 
 data/processed/
 
