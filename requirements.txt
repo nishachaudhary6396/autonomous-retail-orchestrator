@@ -15,7 +15,6 @@ polars
 pandas
 numpy
 
-sentence-transformers
 
 langchain
 langchain-community
