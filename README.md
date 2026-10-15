@@ -8,21 +8,21 @@ Upload a CSV of retail transactions and the pipeline will ingest and stage the d
 
 ## Features
 
-**CSV ingestion** — load, validate, and clean raw retail transaction exports
-**PostgreSQL staging** — a single source of truth for every downstream step
-**Data profiling & sales analytics** — nulls, duplicates, revenue, top products, top customers, monthly trend
-**Sequential multi-agent pipeline** built with **LangGraph**:
-
-- **Quality Agent** — scores data quality and flags issues
-- **Warehouse Agent** — judges whether the data is ready for warehouse use
-- **Demand Agent** — forecasts high/medium/low demand products
-- **Inventory Agent** — builds a priority/standard reorder plan
-- **Approval Agent** — issues the final go/no-go procurement decision
-Powered by **Groq (Llama 3.3)** via LangChain, with every agent's output forced into a strict **Pydantic** schema
-**Streamlit dashboard** — run the whole pipeline and inspect every stage's output in dedicated tabs
+-  **CSV ingestion** — load, validate, and clean raw retail transaction exports
+-  **PostgreSQL staging** — a single source of truth for every downstream step
+-  **Data profiling & sales analytics** — nulls, duplicates, revenue, top products, top customers, monthly trend
+-  **Sequential multi-agent pipeline** built with **LangGraph**:
+  - **Quality Agent** — scores data quality and flags issues
+  - **Warehouse Agent** — judges whether the data is ready for warehouse use
+  - **Demand Agent** — forecasts high/medium/low demand products
+  - **Inventory Agent** — builds a priority/standard reorder plan
+  - **Approval Agent** — issues the final go/no-go procurement decision
+-  Powered by **Groq (Llama 3.3)** via LangChain, with every agent's output forced into a strict **Pydantic** schema
+-  **Streamlit dashboard** — run the whole pipeline and inspect every stage's output in dedicated tabs
 
 ## Architecture
 
+```text
 CSV Upload
     │
     ▼
@@ -48,7 +48,7 @@ Final Procurement Decision
     │
     ▼
 Streamlit UI (live results)
-
+```
 
 ## Tech Stack
 
